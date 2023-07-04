@@ -1,0 +1,27 @@
+@import '../../commonStyles/mixins.scss';
+
+.cart-conatiner{
+    .cart-wrapper{
+        width: 80%;
+        margin: 0 auto;
+        .cart-heading{
+            margin: 10px 0 10px 0;
+            font-size: 1.8rem;
+            font-weight: 500;
+
+        }
+        .cart-card-section{
+
+        }
+    }
+}
+.cart-total-price-container{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    span{
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+   
+}

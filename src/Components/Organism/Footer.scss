@@ -1,0 +1,47 @@
+.footer-container {
+    .footer-wrapper {
+        width: 90%;
+        margin: 0 auto;
+
+        .header-section {
+            width: 90%;
+            margin: 0 auto;
+
+            .header-image {
+                width: 35%;
+            }
+        }
+
+        .link-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .link-content {
+                margin: 15px;
+
+                .link-heading {
+                    margin: 0 0 8px 0;
+                    font-size: 1rem;
+                    letter-spacing: 0.2rem;
+                    text-transform: uppercase;
+                    font-weight: 500;
+
+                }
+
+                .unorderred-list {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    li {
+                        font-size: 1rem;
+                        line-height: 1.6rem;
+                        a{
+                            color: rgb(127, 124, 124);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

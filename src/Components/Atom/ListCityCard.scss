@@ -1,0 +1,33 @@
+@import '../../commonStyles/mixins.scss';
+
+.city-list-card-container{
+    width: 90%;
+    margin: 20px auto;
+    border: 1px solid rgb(219, 217, 217);
+    box-shadow: rgba(28, 28, 28, 0.08) 0px 1.42623px 2.85246px;
+    border-radius: 0.8rem;
+    @include for-tablet-only{
+        width: 90%;
+    }
+    @include for-desktop{
+        margin: 10px 10px 10px 10px;
+    }
+    .city-card-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 5px 10px 5px;
+        .list-card-left{
+            .sub-city-name{
+                margin: 0;
+                padding: 5px 0 10px 20px;
+            }
+            .total-place{
+                margin: 0;
+                padding:5px 0 10px 20px;
+            }
+        }
+    }
+   
+   
+}

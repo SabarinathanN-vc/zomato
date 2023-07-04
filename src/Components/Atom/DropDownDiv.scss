@@ -1,0 +1,19 @@
+.drop-down-container{
+    .drop-down-content{
+        display: flex;
+        padding: 15px;
+        .left-section{
+          width: 95%;
+          font-size: 17px;
+        }
+        .right-section{
+            opacity: 0.5;
+            font-size: 15px;
+            .MuiSvgIcon-root {
+                width:2rem;
+                height: 2rem;
+            }
+        }
+       
+    }
+}

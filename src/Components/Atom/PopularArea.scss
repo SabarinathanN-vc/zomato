@@ -1,0 +1,57 @@
+
+@import '../../commonStyles/mixins.scss';
+.pop-locality-heading{
+    .locality-heading-container{
+        margin:20px auto;
+        width: 90%;
+        @include for-tablet-only{
+           text-align: center;
+           width: 60%;
+           color: rgb(54, 54, 54);
+           font-size: 2rem;
+           line-height: 1.2;
+           font-weight: 400;
+        }
+        @include for-desktop{
+            margin:20px auto;
+            text-align: center;
+            width: 60%;
+            color: rgb(54, 54, 54);
+            font-size: 2rem;
+            line-height: 1.2;
+            font-weight: 400;
+         }
+    }
+   
+    span{
+        font-weight: bold;
+    }
+    .list-popularcity{
+        @include for-tablet-only{
+            display: flex;
+            flex-wrap: wrap;
+            width: 80%;
+            position: relative;
+            margin: 0 auto;
+        }
+        @include for-desktop{
+            display: flex;
+            flex-wrap: wrap;
+            width: 80%;
+            position: relative;
+            margin:0 auto;
+        }
+        .list-city-card{
+            @include for-tablet-only{
+                width: 33%;
+            }
+            @include for-desktop{
+                width: 33%;
+            }
+        }
+    }
+}
+a{
+    text-decoration: none;
+    color: black;
+}

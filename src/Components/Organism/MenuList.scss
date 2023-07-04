@@ -1,0 +1,106 @@
+@import '../../commonStyles/mixins.scss';
+
+.cart-header-con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 20px auto;
+    border: 1px solid rgb(213, 211, 211);
+    padding: 10px;
+    .cart-zmt-img-container{
+        width: 35%;
+        @include for-desktop{
+            width: 20%;
+        }
+        .image-container{
+          width: 100%;
+        }
+       
+    }
+    .cart-logo{
+       
+       @include for-desktop{
+        transform: scale(1.9);
+        margin: 0 20px 0 0;
+       }
+    }
+}
+.menu-list-container{
+    position: relative;
+    .menu-list-wrapper{
+        margin: 20px auto;
+        width: 80%;
+            margin: 20px auto;
+        .hotel-description-conatainer{
+        @include for-tablet-only{
+            width: 80%;
+            margin: 20px auto;
+        }
+            .hotel-image-container{
+                width: 70%;
+                .hotel-image{
+                    width: 100%;
+                    display: none;
+                    @include for-desktop{
+                        display: block;
+                    }
+                    @include for-desktop{
+                        width: 80%;
+                        height: 100%;
+                        display: block;
+                    }
+                }
+            }
+            .hotel-description-con{
+                margin-bottom: 10px;
+                .hotel-name{
+                    margin: 5px 0 5px 0;
+                     font-size: 1.5rem;
+                     font-weight: 500;
+                     @include for-desktop{
+                        font-size: 2rem;
+                     }
+                }
+                .location-con,.regionWiseTast-con{
+                    margin: 5px 0 5px 0;
+                    font-size: 1.2rem;
+                     opacity: 0.5;
+                }
+    
+        }
+       
+        }
+        .hotel-menus-list{
+            @include for-tablet-only{
+                margin: 0 auto;
+                width:80%;
+            }
+           
+        }
+    }
+}
+.cart-container-area{
+   position: fixed;
+   top: 0;
+   background-color: rgba(117, 115, 115, 0.9);
+   height: 100%;
+   width: 100%;
+    .cart-con-wrapper{
+        background-color: white;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        @include for-desktop{
+            width: 50%;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .cart-card-section{
+            height: 80vh;
+            max-height: 300px;
+            overflow: auto;
+        }
+    }
+}

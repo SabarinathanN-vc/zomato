@@ -1,0 +1,29 @@
+@import '../../commonStyles/mixins.scss';
+
+.hotel-card-list-page{
+    @include for-desktop{
+        width: 70%;
+        margin: 0 auto;
+    }
+    .header-loaction{
+        font-size: 1.3rem;
+        line-height: 1.2;
+        font-weight: 350;
+        margin: 20px auto;
+        width: 80%;
+        @include for-desktop{
+            margin: 20px auto;
+            width: 95%;
+            font-size: 2rem;
+        }
+        span{
+            font-weight: 500;
+        }
+    }
+  
+    .hotel-card-container{
+       display: flex;
+       flex-wrap: wrap;
+    }
+    
+}

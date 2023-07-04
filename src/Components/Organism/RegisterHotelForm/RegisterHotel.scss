@@ -1,0 +1,67 @@
+.register-form-container {
+    .register-form-wrapper {
+        margin: 20px auto;
+        width: 90%;
+
+        .restaurant-info-title {
+            font-size: 14px;
+            line-height: 18px;
+            text-transform: uppercase;
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin: 0 0 15px 0;
+        }
+
+        .restaurant-type-time {
+            font-size: 14px;
+            line-height: 18px;
+            text-transform: uppercase;
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin: 20px 0 15px 0;
+        }
+
+        .form-wrapper {
+            .children-wrapper {
+                border-bottom: 8px solid rgb(243, 241, 241);
+
+                .about-restaurant {
+
+                    .drop-down-section {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 90%;
+                        margin: 0 auto;
+                    }
+                   
+                        
+                        .check-box-section{
+                            display: flex;
+                            flex-wrap: wrap;
+                            
+                        }
+                    
+                }
+            }
+
+            .section-1 {}
+        }
+    }
+
+    .input-field {
+        margin: 10px 0;
+    }
+
+    .form-warning-contant {
+        margin: 15px 0 20px 0;
+        box-sizing: border-box;
+        min-width: 0px;
+        padding-bottom: 0px;
+        color: rgb(161, 110, 23);
+        font-size: 12px;
+        border: 1px solid rgb(161, 110, 23);
+        padding: 10px;
+        border-radius: 5px;
+        background-color: rgb(255, 253, 246);
+    }
+}

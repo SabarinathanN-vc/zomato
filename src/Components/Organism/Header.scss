@@ -1,0 +1,442 @@
+@import '../../commonStyles/mixins.scss';
+
+.header-container {
+    height: 27rem;
+    // max-height: none;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    .header-background-image {
+        overflow: hidden;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+
+        img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transform: scale(1.1);
+        }
+
+        .header-content {
+            bottom: 0;
+            width: 100%;
+            position: absolute;
+            margin: 0 auto;
+
+            @include for-desktop {
+                bottom: 100px;
+            }
+
+            .header-logo {
+                margin: 20px auto;
+                width: 160px;
+                height: 30px;
+                position: relative;
+
+                @include for-desktop {
+                    width: 300px;
+                    height: 60px;
+                }
+
+                img {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                    transform: none;
+                }
+            }
+
+            .loaction-withgreet {
+                color: $white;
+                margin: 0 40px;
+
+                h3 {
+                    font-family: Okra, Helvetica, sans-serif;
+                    font-size: 20px;
+                    font-weight: 500;
+                    text-align: center;
+
+                    @include for-desktop {
+                        font-size: 2rem;
+                    }
+                }
+
+                span {
+                    font-size: 22px;
+                    font-weight: bold;
+
+                    @include for-tablet-only {
+                        font-size: 24px;
+                    }
+
+                    @include for-desktop {
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+
+            .search-bar-wrapper {
+                @include for-desktop {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .dummy-dropdown {
+                    background-color: white;
+                    width: 85%;
+                    height: 45px;
+                    margin: 15px 30px;
+                    border-radius: 8px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 20px;
+                    box-sizing: border-box;
+
+                    @include for-tablet-only {
+                        margin: 15px auto;
+                    }
+
+                    @include for-desktop {
+                        margin: 0;
+                        width: 25%;
+                        border-radius: 8px 0 0 8px;
+                        height: 60px;
+
+                    }
+
+                    .dummy-div {
+                        display: none;
+
+                        @include for-desktop {
+                            display: block;
+                            width: 0rem;
+                            height: 2rem;
+                            border: 0.05rem solid rgb(207, 207, 207);
+                        }
+                    }
+
+                    .drop-down-leftside {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        @include for-desktop {
+                            width: 90%;
+                            display: flex;
+                            justify-content: flex-start;
+                        }
+
+                        p {
+                            margin-left: 10px;
+                        }
+                    }
+
+                }
+
+                .searchBar-container {
+                    background-color: white;
+                    width: 85%;
+                    height: 45px;
+                    margin: 20px 30px 45px 30px;
+                    border-radius: 8px;
+                    display: flex;
+                    align-items: center;
+                    padding: 0 20px;
+                    box-sizing: border-box;
+
+                    @include for-tablet-only {
+                        margin: 25px auto 40px;
+                    }
+
+                    @include for-desktop {
+                        width: 40%;
+                        margin: 0;
+                        border-radius: 0 8px 8px 0;
+                        height: 60px;
+
+                    }
+
+                    .search-bar-content {
+                        opacity: 0.5;
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+
+        }
+
+
+    }
+
+    .overlay-container {
+        .overlay-content {
+            .overlay-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 10px 20px;
+
+                @include for-tablet-only {
+                    width: 90%;
+                    margin: 10px auto;
+                }
+
+                h3 {
+                    font-weight: 400;
+                }
+            }
+
+            .location-search-bar {
+                width: 90%;
+                margin: 0 auto;
+
+                .MuiInputBase-input {
+                    width: 100%;
+                    height: 10px;
+                }
+            }
+
+            .gps-location-link {
+                margin: 20px;
+                border-bottom: 2px solid rgb(226, 225, 225);
+                padding-bottom: 20px;
+
+                @include for-tablet-only {
+                    width: 90%;
+                    margin: 0 auto;
+                }
+
+                .gps-location-header {
+                    display: flex;
+                    align-items: center;
+
+                    h3 {
+                        margin-left: 10px;
+                    }
+
+                }
+
+                p {
+                    margin: 0;
+                }
+            }
+        }
+
+        .search-result-container {
+            width: 90%;
+            margin: 0 auto;
+            max-height: 400px;
+            overflow: auto;
+        }
+
+    }
+
+    .overlay-container {
+        background-color: aqua;
+        position: fixed;
+        z-index: 50;
+        width: 100%;
+        height: 100%;
+        background: rgba(black, 0.7);
+        @include for-desktop{
+            display: flex;
+            justify-content: center;
+        }
+
+        .overlay-content {
+            position: absolute;
+            background-color: white;
+            width: 100%;
+            height: 80vh;
+            bottom: 0;
+            border-radius: 15px 15px 0 0;
+            @include for-desktop{
+                width: 50%;
+            }
+        }
+
+    }
+
+}
+
+.service-card-layout {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include for-tablet-only {
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    @include for-desktop {
+        width: 80%;
+        flex-wrap: nowrap;
+        margin: 0 auto;
+    }
+
+    .service-card-link {
+        width: 43%;
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+    }
+
+}
+
+.sending-mail-container {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 90%;
+    background-color: rgb(255, 251, 247);
+    margin: 0 auto;
+
+    .mail-card-container {
+        .mail-card-heading {
+            width: 100%;
+            text-align: center;
+            margin-left: 0px;
+            padding-left: 0px;
+
+            .main-heading {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+                line-height: 1.2;
+
+            }
+
+            .sub-heading {
+                width: 100%;
+                font-size: 1rem;
+                line-height: 1.2;
+                opacity: 0.5;
+
+            }
+        }
+
+        .form-container {
+            width: 90%;
+            margin: 0 auto;
+
+            .label {
+                padding: 0 0 15px 0;
+
+            }
+
+            .submit-button {
+                background-color: rgb(243, 65, 65);
+                color: white;
+                border: none;
+                border-radius: 10px;
+                width: 65px;
+                height: 40px;
+            }
+
+            .input-area {
+                display: flex;
+                flex-wrap: nowrap;
+            }
+
+            input {
+                margin-right: 10px;
+                width: 80%;
+                height: 40px;
+                border-radius: 8px;
+                border: 1px solid rgb(194, 193, 193);
+                padding-left: 10px;
+            }
+        }
+
+        .os-based-download {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+
+            .download-app {
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 1.3rem;
+                opacity: 0.5;
+            }
+
+            .image-container {
+                display: flex;
+                flex-wrap: nowrap;
+
+                a:first-child {
+                    margin-right: 20px;
+                }
+
+                img {
+                    width: 130px;
+                }
+            }
+        }
+    }
+}
+
+.accordian-wrap {
+    ul {
+        margin: 0;
+
+        li {
+            margin: 5px 0 0 0
+        }
+    }
+
+    .explore-options {
+
+        margin: 0 0 20px 20px;
+        font-size: 1.8rem;
+        line-height: 2rem;
+
+        @include for-tablet-only {
+            margin: 0 auto;
+            width: 50%;
+        }
+
+        @include for-desktop {
+            margin: 0 auto;
+            width: 90%;
+        }
+    }
+
+    .accor-heading-layout {
+        p {
+            margin: 10px 0 10px 0;
+        }
+    }
+}
+
+.account-info{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px 20px 0 0;
+    .initial-container{
+        color: white;
+        font-size: 1.2rem;
+        background-color: rgb(166, 160, 160);
+        padding: 5px;
+        border-radius: 50%;
+        border: 1px solid black;
+        
+
+    }
+}
