@@ -11,15 +11,18 @@ const RadioButton = ((props) => {
         options = [],
         error = false,
         helperText = "",
-        onchange = (() => null),
-        name = ""
+        onchange = () => null,
+        name = "",
+        id=0
     } = props
     return (<>
         <FormControl error={error} variant="standard">
+            
             <RadioGroup
                 name={name}
                 //   value={value}
-                onChange={(e) => onchange(e.target.value)}
+                onChange={(e) => onchange(e.target.value,name,id)}
+            
             >
                 {options.map((res) => {
                     return (<FormControlLabel value={res.value} control={<Radio />} label={res.label} />)

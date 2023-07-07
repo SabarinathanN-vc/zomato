@@ -6,8 +6,11 @@ const Cart = ({ cartdata, setcartdata ,handleChange}) => {
 
     const deleteCart = ((arg) => {
         const newarr = cartdata.filter((dat) => dat.foodName !== arg.foodName)
-        setcartdata(newarr)
-        handlePrice()
+        if (window.confirm("Make Sure want to delete item!")) {
+            setcartdata(newarr)
+             handlePrice()
+          }
+       
     })
     const [totalcartprice, settotalcartprice] = useState(0)
     const handlePrice = (() => {

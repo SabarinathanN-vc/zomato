@@ -10,7 +10,8 @@ const MenuListcmp = ((props) => {
     const { } = props;
 
     const [viewCart, setViewCart] = useState(false);
-    const [cartData, setCartData] = useState([])
+    const [cartData, setCartData] = useState([]);
+    const [notiCount, setNotiCout] = useState(0)
     let data = JSON.parse(localStorage.getItem('hotelsList'));
 // console.log(data)
     const addtToCart = ((arg) => {
@@ -51,14 +52,19 @@ const MenuListcmp = ((props) => {
     const closeCart = (() => {
         setViewCart(!viewCart)
     })
-
+const notificationCount = (()=>{
+    setNotiCout(cartData.length)
+})
+useEffect(()=>{
+    notificationCount()
+},[cartData,setCartData])
     return (
         <>
             <div className="cart-header-con">
                 <div className="cart-zmt-img-container">
                     <Link to="/">  <img className="image-container" src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png?fit=around|198:42&crop=198:42;*,*" /></Link>
                 </div>
-                <div className="cart-logo" onClick={showCartfun}><ShoppingCartOutlinedIcon /></div>
+                <div className="cart-logo" onClick={showCartfun}><ShoppingCartOutlinedIcon /> <div className="cart-notification">{notiCount}</div></div>
             </div>
             <div className="menu-list-container">
                 <div className="menu-list-wrapper">

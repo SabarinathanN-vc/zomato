@@ -27,12 +27,13 @@ const Header = (() => {
         dining: true,
         nightout: true
     })
-
-   
     const [searchValue, setSearchValue] = useState({
         search: "",
         searchhotel: ""
     });
+    let cityList = ["coimbatore","madurai","chennai","trichy","tanjore"]
+    let localData = JSON.parse(localStorage.getItem("resturantDataNew"))
+    console.log("LocalData",localData)
 
     const addLocalStoragefunction = (() => {
         setLocalStoredVals(addLocalStorage().location);
@@ -50,7 +51,7 @@ const Header = (() => {
    
 
     const filterLocation = (() => {
-        return localstoredVals.filter((res) => res.city.toLowerCase().includes(searchValue.search))
+        return cityList.filter((res) => res.toLowerCase().includes(searchValue.search))
 
     })
 ///////
@@ -120,7 +121,7 @@ const filterHotels = (() => {
         let data = {
             email: emaildata
         }
-        emailjs.sendForm('service_1e64eqn', 'template_ioh06vc', data, 'uzaIcoBw-2XXlYujE')
+        emailjs.sendForm('service_1e64eqn', 'template_ioh06vc', data.email, 'uzaIcoBw-2XXlYujE')
             .then((result) => {
                 alert("mail sent su")
             }, (error) => {
@@ -154,6 +155,9 @@ const sethotellist = (()=>{
      });
      localStorage.setItem("hotelsList", JSON.stringify(finedata[0]))
  })
+
+
+ 
     return (
         <>
             <div className="header-container">
@@ -206,7 +210,7 @@ const sethotellist = (()=>{
                             <div className="search-result-container">
                                 {filterLocation().length > 0 ? filterLocation().map((res) => {
                                     return (
-                                        <p onClick={() => storeLocationData(res.location_id, res.city)}>{res.city}</p>
+                                        <p onClick={() => storeLocationData(res)}>{res}</p>
                                     )
                                 }): <p>No city found....</p>}
                             </div>

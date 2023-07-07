@@ -36,7 +36,7 @@ const Footer = (() => {
                         <div className="link-content">
                             <h4 className="link-heading">For Restaurants</h4>
                             <ul className="unorderred-list">
-                                <li><a href="https://www.zomato.com/who-we-are">Partner With Us</a></li>
+                                <li><a href="http://localhost:3000/registerHotels">Partner With Us</a></li>
                                 <li><a href="https://blog.zomato.com/">Apps For You</a></li>
                             </ul>
                         </div>

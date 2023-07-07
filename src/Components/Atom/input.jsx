@@ -19,8 +19,8 @@ const Input = (props) => {
     return ( <FormControl fullWidth>
         <TextField
         id={id}
-        onChange={(e)=>onchange(e.target.value,name)}
-        onBlur={(e)=>onblur(e.target.value,name)}
+        onChange={(e)=>onchange(e.target.value,name,id)}
+        onBlur={(e)=>onblur(e.target.value,name,id)}
         required={required}
         label={label}
         helperText={helperText}

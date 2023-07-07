@@ -1,67 +1,80 @@
-.register-form-container {
-    .register-form-wrapper {
-        margin: 20px auto;
-        width: 90%;
 
-        .restaurant-info-title {
-            font-size: 14px;
-            line-height: 18px;
-            text-transform: uppercase;
-            font-weight: 400;
-            letter-spacing: 2px;
-            margin: 0 0 15px 0;
+@import '../../../commonStyles/mixins.scss';
+
+.cart-header-con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 20px auto;
+    border: 1px solid rgb(213, 211, 211);
+    padding: 10px;
+    .cart-zmt-img-container{
+        width: 35%;
+        @include for-tablet-only{
+            width: 20%;
         }
-
-        .restaurant-type-time {
-            font-size: 14px;
-            line-height: 18px;
-            text-transform: uppercase;
-            font-weight: 400;
-            letter-spacing: 2px;
-            margin: 20px 0 15px 0;
+        @include for-desktop{
+            width: 20%;
         }
-
-        .form-wrapper {
-            .children-wrapper {
-                border-bottom: 8px solid rgb(243, 241, 241);
-
-                .about-restaurant {
-
-                    .drop-down-section {
-                        display: flex;
-                        justify-content: space-between;
-                        width: 90%;
-                        margin: 0 auto;
-                    }
-                   
-                        
-                        .check-box-section{
-                            display: flex;
-                            flex-wrap: wrap;
-                            
-                        }
-                    
-                }
+        .image-container{
+          width: 100%;
+        }
+       
+    }
+}
+.register-form-container{
+    .form-wrapper{
+        width: 80%;
+        margin: 0 auto;
+        @include for-desktop{
+            width: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 20px;
+        }
+        .input-section{
+            margin: 20px 0 20px 0;
+            @include for-desktop{
+                width: 40%;
+                margin: 15px 0 15px 0;
             }
-
-            .section-1 {}
+        }
+        .input-section-with-label{
+            margin: 20px 0 20px 0;
+            .input-label{
+                margin-bottom: 15px;
+            }
+            @include for-desktop{
+                width: 100%;
+                margin: 15px 0 15px 0;
+            }
+        }
+        .menu-heading{
+            @include for-desktop{
+                width: 100%;
+            }
+        }
+        .remove-btn{
+            @include for-desktop{
+                width: 100%;
+            }
         }
     }
+}
+.button-container{
+    .button-wrapper{
+       @include for-desktop{
+        width: 70%;
+        margin: 0 auto;
+       }
+        .button-separator{
+            display: flex;
+            justify-content: center;
+            width: 50%;
+            margin:20px auto;
 
-    .input-field {
-        margin: 10px 0;
+        }
     }
-
-    .form-warning-contant {
-        margin: 15px 0 20px 0;
-        box-sizing: border-box;
-        min-width: 0px;
-        padding-bottom: 0px;
-        color: rgb(161, 110, 23);
-        font-size: 12px;
-        border: 1px solid rgb(161, 110, 23);
-        padding: 10px;
-        border-radius: 5px;
-        background-color: rgb(255, 253, 246);
-    }
+   
 }

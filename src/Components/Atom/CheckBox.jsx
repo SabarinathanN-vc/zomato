@@ -14,17 +14,14 @@ const CheckBox = ((props) => {
     } = props;
 
     return (<>
-    <div className="with-label-container">
         <Checkbox
-            onChange={(e) => onchange(e.target.value, name)}
+            onChange={(e) => onchange(e.target.checked, name)}
             name={name}
             className={className}
             required={required}
             value={value}
-            checked={checkedValue.get(value) ? checkedValue.get(value) :false}
         />
         <label>{labelText}</label>
-        </div>
     </>)
 })
 
